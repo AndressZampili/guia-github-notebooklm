@@ -89,3 +89,46 @@ Qual a diferença entre fork e clone?
 
 
 Respostas:
+
+A diferença fundamental entre **Fork** e **Clone** está em **onde** a cópia do projeto é criada e para **qual finalidade** ela serve:
+
+---
+
+### 1. **Fork (Cópia no GitHub / Na Nuvem)**
+* **O que é:** O *Fork* cria uma **cópia exata de um repositório de outra pessoa diretamente na sua conta do GitHub**.
+* **Onde acontece:** 100% no servidor do GitHub (de conta para conta na nuvem).
+* **Para que serve:** Serve para você ter a sua própria versão "remota" de um projeto de terceiros, podendo modificar o código livremente sem afetar o projeto original do autor. 
+* **Importante:** O *Fork* não é um comando do Git, mas sim uma ferramenta da interface do GitHub. É o ponto de partida padrão para colaborar em projetos *open source* (código aberto).
+
+---
+
+### 2. **Clone (Cópia para o seu Computador / Local)**
+* **O que é:** O *Clone* faz o download de um repositório remoto (do GitHub) para o disco rígido do seu computador.
+* **Onde acontece:** Do GitHub para a sua máquina local.
+* **Para que serve:** Baixa todos os arquivos e todo o histórico de versões do projeto para que você possa programar, testar e editar o código no seu editor (como o VS Code).
+* **Comando Git:** Executado no terminal usando o comando `git clone [URL-do-repositório]`.
+
+---
+
+### Resumo Comparativo
+
+| Recurso | **Fork** | **Clone** |
+| :--- | :--- | :--- |
+| **Localização** | No **GitHub** (na nuvem). | No **seu computador** (local). |
+| **Origem → Destino** | Conta do autor no GitHub → Sua conta no GitHub. | Repositório no GitHub → Seu computador. |
+| **Como executar?** | Clicando no botão **Fork** no site do GitHub. | Digitando o comando `git clone [url]` no terminal. |
+| **Objetivo** | Duplicar o projeto de outra pessoa para a sua conta antes de alterar. | Baixar o projeto para trabalhar off-line. |
+
+---
+
+### Como os dois trabalham juntos no dia a dia?
+
+Quando você quer contribuir para um projeto aberto no GitHub, o fluxo completo costuma ser:
+
+1. **Fork:** Você clica em *Fork* no repositório original para criar uma cópia dele na sua conta do GitHub.
+2. **Clone:** Você executa o `git clone` do **seu fork** para baixar o código para o seu computador.
+3. **Alteração e Push:** Você altera o código no seu computador e envia as alterações de volta para o seu GitHub (`git push`).
+4. **Pull Request:** Você abre um *Pull Request* para o repositório original, solicitando que o autor principal analise e inclua suas melhorias no projeto original.
+
+💡 Quer que eu explique como funciona o **Pull Request** para enviar suas alterações de volta ou prefere ver na prática como fazer um `git clone` no seu terminal?
+
